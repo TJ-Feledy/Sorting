@@ -36,9 +36,10 @@ def merge_sort( arr ):
         left = arr[:middle]
         right = arr[middle:]
 
-        merge_sort(left)
-        merge_sort(right)
-        merge(left,right)
+        left = merge_sort(left)
+        right = merge_sort(right)
+
+        return merge(left,right)
 
     return arr
 
